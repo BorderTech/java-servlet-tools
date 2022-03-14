@@ -20,11 +20,11 @@ Servlet Tools provides helper filters and listeners to make it easier to use Ser
 
 ## Why use Servlet Tools
 
-A project may have existing Servlet filters/listeners that are not annotated or the project may be using 3rd party filters/listeners that are not annotated.
+A project may have existing Servlet filters/listeners or 3rd party filters/listeners that are not annotated.
 
-The Servlet Tools combo filter/listener makes it easier for projects to combine these filters/listeners into a single class that can be annotated.
+If the project is not using a web.xml and relying on Servlet annotations, the Servlet Tools combo filter/listener makes it easier for projects to combine these filters/listeners into a single class that can be annotated.
 
-Without Servlet Tools the project would need to (1) define each filter/listener in a web.xml or (2) extend the existing filters/listeners and annotate the class.
+Without Servlet Tools the project would need to (1) define each filter/listener in a web.xml or (2) extend the existing filters/listeners and annotate the new classes.
 
 ## Getting started
 
@@ -44,7 +44,10 @@ Add dependency:
 
 ### Combo Filter
 
-Creating a [combo servlet filter](https://github.com/BorderTech/java-servlet-tools/blob/main/src/main/java/com/github/bordertech/taskmaster/servlet/combo/AbstractComboFilter.java) that combines multiple filters into one annotated class:
+How to create a combo filter that combines multiple servlet filters into one annotated class:
+- Create a new class that extends [AbstractComboFilter](https://github.com/BorderTech/java-servlet-tools/blob/main/src/main/java/com/github/bordertech/taskmaster/servlet/combo/AbstractComboFilter.java)
+- In the constructor, define the filter classes to be combined
+- Annotate the new class with @WebFilter
 
 ``` java
   @WebFilter
@@ -59,7 +62,10 @@ Creating a [combo servlet filter](https://github.com/BorderTech/java-servlet-too
 
 ### Combo Listener
 
-Creating a [combo servlet listener](https://github.com/BorderTech/java-servlet-tools/blob/main/src/main/java/com/github/bordertech/taskmaster/servlet/combo/AbstractComboServletListener.java) that combines multiple listeners into one annotated class:
+How to create a combo listener that combines multiple servlet listeners into one annotated class:
+- Create a new class that extends [AbstractComboServletListener](https://github.com/BorderTech/java-servlet-tools/blob/main/src/main/java/com/github/bordertech/taskmaster/servlet/combo/AbstractComboServletListener.java)
+- In the constructor, define the listener classes to be combined
+- Annotate the new class with @WebListener
 
 ``` java
   @WebListener
