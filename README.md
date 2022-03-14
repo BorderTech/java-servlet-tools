@@ -71,7 +71,7 @@ How to create a combo listener that combines multiple servlet listeners into one
   @WebListener
   public class MyListener extends AbstractComboServletListener {
 
-    public MyFilter() {
+    public MyListener() {
       super(new ExistingListener(), new AnotherListener());
     }
 
