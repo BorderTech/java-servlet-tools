@@ -54,7 +54,7 @@ How to create a combo filter that combines multiple servlet filters into one ann
   public class MyFilter extends AbstractComboFilter {
 
     public MyFilter() {
-      super(ExistingFilter.class, AnotherFilter.class);
+      super(new ExistingFilter(), new AnotherFilter());
     }
 
   }
@@ -72,7 +72,7 @@ How to create a combo listener that combines multiple servlet listeners into one
   public class MyListener extends AbstractComboServletListener {
 
     public MyFilter() {
-      super(ExistingListener.class, AnotherListener.class);
+      super(new ExistingListener(), new AnotherListener());
     }
 
   }
