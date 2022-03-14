@@ -20,7 +20,7 @@
 	</properties>
 
 	<description>
-		Task Master provides Servlet Tools such as filters and listeners.
+		Servlet Tools provides helper filters and listeners.
 	</description>
 
 	<url>https://github.com/bordertech/java-servlet-tools</url>
