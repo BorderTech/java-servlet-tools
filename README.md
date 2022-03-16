@@ -6,13 +6,16 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=BorderTech_java-servlet-tools&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BorderTech_java-servlet-tools)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=BorderTech_java-servlet-tools&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=BorderTech_java-servlet-tools)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=BorderTech_java-servlet-tools&metric=coverage)](https://sonarcloud.io/summary/new_code?id=BorderTech_java-servlet-tools)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/48168a42dc6947f7a57c74a250b51ce3)](https://www.codacy.com/gh/BorderTech/java-servlet-tools/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BorderTech/java-servlet-tools&amp;utm_campaign=Badge_Grade)
+[![javadoc](https://javadoc.io/badge2/com.github.bordertech.taskmaster/java-servlet-tools/javadoc.svg)](https://javadoc.io/doc/com.github.bordertech.taskmaster/java-servlet-tools)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.bordertech.taskmaster/java-servlet-tools.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.bordertech.taskmaster%22%20AND%20a:%22java-servlet-tools%22)
 
 ## Content
 
-- [What is Servlet Tools](#what-is-servlet-tools)
-- [Why use Servlet Tools](#why-use-servlet-tools)
-- [Getting started](#getting-started)
-- [Contributing](#contributing)
+  - [What is Servlet Tools](#what-is-servlet-tools)
+  - [Why use Servlet Tools](#why-use-servlet-tools)
+  - [Getting started](#getting-started)
+  - [Contributing](#contributing)
 
 ## What is Servlet Tools
 
@@ -45,9 +48,9 @@ Add dependency:
 ### Combo Filter
 
 How to create a combo filter that combines multiple servlet filters into one annotated class:
-- Create a new class that extends [AbstractComboFilter](https://github.com/BorderTech/java-servlet-tools/blob/main/src/main/java/com/github/bordertech/taskmaster/servlet/combo/AbstractComboFilter.java)
-- In the constructor, define the filter classes to be combined
-- Annotate the new class with @WebFilter
+  - Create a new class that extends [AbstractComboFilter](https://github.com/BorderTech/java-servlet-tools/blob/main/src/main/java/com/github/bordertech/taskmaster/servlet/combo/AbstractComboFilter.java)
+  - In the constructor, define the filter classes to be combined
+  - Annotate the new class with @WebFilter
 
 ``` java
   @WebFilter
@@ -63,9 +66,9 @@ How to create a combo filter that combines multiple servlet filters into one ann
 ### Combo Listener
 
 How to create a combo listener that combines multiple servlet listeners into one annotated class:
-- Create a new class that extends [AbstractComboServletListener](https://github.com/BorderTech/java-servlet-tools/blob/main/src/main/java/com/github/bordertech/taskmaster/servlet/combo/AbstractComboServletListener.java)
-- In the constructor, define the listener classes to be combined
-- Annotate the new class with @WebListener
+  - Create a new class that extends [AbstractComboServletListener](https://github.com/BorderTech/java-servlet-tools/blob/main/src/main/java/com/github/bordertech/taskmaster/servlet/combo/AbstractComboServletListener.java)
+  - In the constructor, define the listener classes to be combined
+  - Annotate the new class with @WebListener
 
 ``` java
   @WebListener
